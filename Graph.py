@@ -4,8 +4,6 @@ import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 
 st.title("Manipulation de données et création de graphiques")
 
@@ -14,8 +12,6 @@ data = pd.read_html(url)
 liste = data[0]['Name'][5:28].to_list()
 liste.append('')
 liste.sort()
-
-
 
 selected = st.selectbox('Quel DataSet souhaites-tu utiliser ? :', liste)
 
